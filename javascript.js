@@ -30,6 +30,7 @@ function playRound(playerSelection, computerSelection) {
   } else {
     return `You lose! ${computerSelection} beats ${playerSelection}`
   }
+  
 }
 
 function getPlayerChoice(){
@@ -45,3 +46,4 @@ function game(){
     }
 
 }
+let input = prompt("Type rock, paper or scissor")
