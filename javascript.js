@@ -3,6 +3,7 @@ const options = ["rock", "paper", "scissor"]
 
 function getComputerChoice(){
     const choice = options[Math.floor(Math.random()*options.length)]
+    console.log()
     return choice
 }
 
@@ -20,6 +21,8 @@ function checkIfWin(playerSelection, computerSelection){
     else {
         return "Computer"
     }
+
+
     }
 function playRound(playerSelection, computerSelection) {
   const result = checkIfWin(playerSelection, computerSelection);
@@ -33,17 +36,23 @@ function playRound(playerSelection, computerSelection) {
   
 }
 
-function getPlayerChoice(){
-    le
+const playerSelection = "rock"
+const computerSelection = getComputerChoice()
+console.log(playRound(playerSelection, computerSelection))
 
-}
 
-function game(){
-    for (let i = 0; i < 5; i++){
-        const playerSelection = "rock"
-        const computerSelection = getComputerChoice()
-        console.log(playRound(playerSelection, computerSelection))
-    }
+const body = document.querySelector("body");
 
-}
-let input = prompt("Type rock, paper or scissor")
+const rock = document.createElement("button");
+rock.textContent = "Rock";
+body.appendChild(rock);
+
+const paper = document.createElement("button");
+paper.textContent = "Paper";
+body.appendChild(paper);
+
+const scissor = document.createElement("button");
+scissor.textContent = "Paper";
+body.appendChild(scissor)
+
+
