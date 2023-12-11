@@ -36,23 +36,25 @@ function playRound(playerSelection, computerSelection) {
   
 }
 
-const playerSelection = "rock"
-const computerSelection = getComputerChoice()
-console.log(playRound(playerSelection, computerSelection))
 
+function game(){
+  let playerWin = 0;
+  let computerWin = 0;
+  let gameWinner = ""
+}
 
-const body = document.querySelector("body");
+// the button selection
+const buttons = document.querySelectorAll("button")
+buttons.forEach((button) => {
+  button.addEventListener("click", () => {
+   playerSelection = button.className;
+   const computerSelection = getComputerChoice();
 
-const rock = document.createElement("button");
-rock.textContent = "Rock";
-body.appendChild(rock);
+  })
+})
 
-const paper = document.createElement("button");
-paper.textContent = "Paper";
-body.appendChild(paper);
-
-const scissor = document.createElement("button");
-scissor.textContent = "Paper";
-body.appendChild(scissor)
-
-
+// Div Container for every Result
+const container = document.querySelector("#container");
+const resultDiv = document.createElement("div");
+resultDiv.style.marginTop = "40px";
+container.appendChild(resultDiv)
