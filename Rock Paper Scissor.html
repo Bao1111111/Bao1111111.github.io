@@ -4,13 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="javascript.js"></script>
 </head>
 <body>
-    <div id="container">
-    <button class="Rock">Rock</button>
-    <button class="Paper">Paper</button>
-    <button class="Scissor">Scissor</button>
+    <div id="game-container">
+        <h1>Rock Paper Scissors</h1>
+        <div id="result"></div>
+        <div id="score">Player: 0 | Computer: 0</div>
+        <div id="options">
+            <button onclick="playRound('rock')">Rock</button>
+            <button onclick="playRound('paper')">Paper</button>
+            <button onclick="playRound('scissors')">Scissors</button>
+        </div>
     </div>
+    <script src="javascript.js"></script>
 </body>
 </html>
